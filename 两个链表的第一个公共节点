@@ -1,0 +1,12 @@
+class Solution {
+public:
+    ListNode* FindFirstCommonNode( ListNode* pHead1, ListNode* pHead2) {
+        ListNode *pA = pHead1,*pB = pHead2;
+        while(pA != pB)
+        {
+            pA = pA ? pA->next : pHead2;
+            pB = pB ? pB->next : pHead1;
+        }
+        return pA;
+    }
+};
